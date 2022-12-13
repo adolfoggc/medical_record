@@ -116,8 +116,8 @@ module ApplicationHelper
     html +=     '<div class="bg-white py-2 collapse-inner rounded">'
     submenu_section.each_with_index do |section, s| 
       html +=       '<h6 class="collapse-header">' + section + '</h6>'
-                      submenu_names[s].each_with_index do |names, n|
-        html +=       '<a class="collapse-item" href="' + submenu_paths[s][n] + '">' + name + '</a>'
+                      submenu_names[s].each_with_index do |submenu_name, n|
+        html +=       '<a class="collapse-item" href="' + submenu_paths[s][n] + '">' + submenu_name + '</a>'
                       end
     end
     html +=     '</div>'
