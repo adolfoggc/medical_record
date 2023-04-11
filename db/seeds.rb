@@ -14,3 +14,14 @@ def message(word)
     'incredible', 'magic', 'special', 'spatial', 'orthopedic', 'shiny', 'tasty']
   "#{verbs.sample} #{adjectives.sample} #{word}"
 end
+
+if Rails.env.production?
+  puts 'Sorry, no seeds here..'
+else
+  unless User.any?
+    puts message('credentials')
+    User.create(email: 'test@test.com', password: '123123')
+  end
+
+  puts 'Prepare for the harvest!'
+end
