@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :active_ingredients
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
@@ -9,6 +8,8 @@ Rails.application.routes.draw do
   
   authenticate :user do
     resources :patients
+    resources :medications
+    resources :active_ingredients
     
     root 'dashboard#home'
   end
