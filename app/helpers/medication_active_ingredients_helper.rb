@@ -1,0 +1,2 @@
+module MedicationActiveIngredientsHelper
+end

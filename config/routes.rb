@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :patients
     resources :medications
     resources :active_ingredients
+    resources :medication_active_ingredients
     
     root 'dashboard#home'
   end

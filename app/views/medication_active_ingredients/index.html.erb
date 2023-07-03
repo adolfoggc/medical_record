@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Medication active ingredients</h1>
+
+<div id="medication_active_ingredients">
+  <% @medication_active_ingredients.each do |medication_active_ingredient| %>
+    <%= render medication_active_ingredient %>
+    <p>
+      <%= link_to "Show this medication active ingredient", medication_active_ingredient %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New medication active ingredient", new_medication_active_ingredient_path %>

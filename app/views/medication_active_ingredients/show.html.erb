@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @medication_active_ingredient %>
+
+<div>
+  <%= link_to "Edit this medication active ingredient", edit_medication_active_ingredient_path(@medication_active_ingredient) %> |
+  <%= link_to "Back to medication active ingredients", medication_active_ingredients_path %>
+
+  <%= button_to "Destroy this medication active ingredient", @medication_active_ingredient, method: :delete %>
+</div>
