@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: bard_development
+  database: medical_record_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: bard
+  #username: medical_record
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: bard_test
+  database: medical_record_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: bard_production
-  username: bard
-  password: <%= ENV["BARD_DATABASE_PASSWORD"] %>
+  database: medical_record_production
+  username: medical_record
+  password: <%= ENV["MEDICAL_RECORD_DATABASE_PASSWORD"] %>
